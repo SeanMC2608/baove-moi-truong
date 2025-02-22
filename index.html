@@ -8,28 +8,25 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background: url('https://i.imgur.com/U3D3M6R.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
             margin: 0;
             padding: 0;
-            color: white;
-            background: url('https://source.unsplash.com/1600x900/?nature,environment') no-repeat center center/cover;
-        }
-        .overlay {
-            background: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .content {
-            position: relative;
-            z-index: 1;
-            padding: 50px 20px;
         }
         header {
-            font-size: 30px;
+            background-color: rgba(0, 77, 64, 0.8);
+            color: white;
+            padding: 20px;
+            font-size: 28px;
             font-weight: bold;
-            margin-bottom: 20px;
+        }
+        .container {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
         }
         .button {
             display: inline-block;
@@ -38,22 +35,32 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 18px;
-            transition: 0.3s;
+            margin-top: 20px;
         }
         .button:hover {
-            background-color: #45a049;
+            background-color: #388E3C;
         }
     </style>
 </head>
 <body>
-    <div class="overlay"></div>
-    <div class="content">
-        <header>
-            Hãy Chung Tay Bảo Vệ Môi Trường
-        </header>
-        <p>Môi trường là ngôi nhà chung của chúng ta. Hãy cùng nhau hành động vì một hành tinh xanh!</p>
-        <a href="https://luatvietnam.vn/linh-vuc-khac/bao-ve-moi-truong-la-gi-883-93235-article.html" class="button" target="_blank">Tìm hiểu thêm</a>
+    <header>
+        Hãy Chung Tay Bảo Vệ Môi Trường
+    </header>
+    <div class="container">
+        <h2>Bảo Vệ Môi Trường Là Gì?</h2>
+        <p>Bảo vệ môi trường là hoạt động bảo vệ các yếu tố tự nhiên, giảm ô nhiễm và duy trì cân bằng sinh thái.</p>
+        
+        <h2>Các Điều Luật Liên Quan</h2>
+        <p>Việt Nam có nhiều luật bảo vệ môi trường như Luật Bảo vệ Môi trường 2020, các nghị định về xử lý rác thải, bảo vệ tài nguyên nước...</p>
+        
+        <h2>Các Ngày Lễ Môi Trường</h2>
+        <ul>
+            <li>Ngày Trái Đất (22/4)</li>
+            <li>Ngày Môi Trường Thế Giới (5/6)</li>
+            <li>Chiến dịch Làm Sạch Biển (tháng 9)</li>
+        </ul>
+        
+        <a href="https://luatvietnam.vn/linh-vuc-khac/bao-ve-moi-truong-la-gi-883-93235-article.html" class="button">Tìm hiểu thêm</a>
     </div>
 </body>
 </html>
