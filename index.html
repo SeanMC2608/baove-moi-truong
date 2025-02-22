@@ -8,28 +8,33 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background: url('https://source.unsplash.com/1600x900/?nature,environment') no-repeat center center/cover;
-            color: white;
             margin: 0;
             padding: 0;
+            color: white;
+            background: url('https://source.unsplash.com/1600x900/?nature,environment') no-repeat center center/cover;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 50px 20px;
         }
         header {
-            background-color: rgba(0, 77, 64, 0.8);
-            padding: 20px;
-            font-size: 28px;
-        }
-        .container {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-            margin: 50px auto;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
         .button {
             display: inline-block;
-            padding: 12px 24px;
-            background-color: #00796b;
+            padding: 10px 20px;
+            background-color: #4CAF50;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -37,26 +42,18 @@
             transition: 0.3s;
         }
         .button:hover {
-            background-color: #004d40;
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <header>
-        🌍 Hãy Chung Tay Bảo Vệ Môi Trường 🌱
-    </header>
-    <div class="container">
-        <h2>Tại Sao Cần Bảo Vệ Môi Trường?</h2>
-        <p>Môi trường là tài nguyên quý giá của nhân loại. Hãy cùng nhau gìn giữ để có một hành tinh xanh - sạch - đẹp!</p>
-        <h3>Chúng Ta Có Thể Làm Gì?</h3>
-        <ul style="text-align: left;">
-            <li>🌳 Trồng cây xanh</li>
-            <li>💡 Tiết kiệm năng lượng</li>
-            <li>♻️ Tái chế rác thải</li>
-            <li>🚰 Bảo vệ nguồn nước sạch</li>
-            <li>🛍️ Sử dụng sản phẩm thân thiện môi trường</li>
-        </ul>
-        <a href="#" class="button">Tìm hiểu thêm</a>
+    <div class="overlay"></div>
+    <div class="content">
+        <header>
+            Hãy Chung Tay Bảo Vệ Môi Trường
+        </header>
+        <p>Môi trường là ngôi nhà chung của chúng ta. Hãy cùng nhau hành động vì một hành tinh xanh!</p>
+        <a href="https://luatvietnam.vn/linh-vuc-khac/bao-ve-moi-truong-la-gi-883-93235-article.html" class="button" target="_blank">Tìm hiểu thêm</a>
     </div>
 </body>
 </html>
