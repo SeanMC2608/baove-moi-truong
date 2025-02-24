@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #ffffff, #d4edda); /* Nền xanh lá nhạt chuyển sang trắng */
+      background: linear-gradient(to right, #d4edda, #ffffff); /* Nền xanh lá nhạt chuyển sang trắng */
       margin: 0;
       padding: 20px;
       color: #333;
@@ -15,10 +15,10 @@
     .container {
       max-width: 900px;
       margin: auto;
-      background: white;
+      background: #fff;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     }
     h1, h2, h3 {
       color: #2e7d32;
@@ -29,13 +29,15 @@
       font-size: 18px;
       line-height: 1.6;
       text-align: justify;
+      margin-bottom: 20px;
     }
     ul {
-      list-style-type: none;
+      list-style: none;
       padding-left: 0;
+      margin-bottom: 20px;
     }
     ul li {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       font-size: 18px;
       text-align: left;
     }
@@ -43,36 +45,18 @@
       margin-right: 8px;
       font-size: 20px;
       vertical-align: middle;
-      /* Sử dụng các icon khác nhau cho từng mục nếu muốn, ở đây dùng emoji chung cho ví dụ */
     }
-    /* Các icon riêng cho từng mục */
-    .icon-air::before {
-      content: "🌫️";
-    }
-    .icon-water::before {
-      content: "💧";
-    }
-    .icon-soil::before {
-      content: "🌱";
-    }
-    .icon-forest::before {
-      content: "🌳";
-    }
-    .icon-recycle::before {
-      content: "♻️";
-    }
-    .icon-action::before {
-      content: "🚯";
-    }
-    .section-icon {
-      font-size: 24px;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
+    /* Icon riêng cho các mục */
+    .icon-earth::before { content: "🌍"; }
+    .icon-law::before { content: "📜"; }
+    .icon-warning::before { content: "⚠️"; }
+    .icon-measure::before { content: "✅"; }
+    .icon-danger::before { content: "🚫"; }
+    .icon-benefit::before { content: "📈"; }
     blockquote {
       border-left: 4px solid #2e7d32;
       padding-left: 10px;
-      margin-left: 0;
+      margin-left: 20px;
       font-style: italic;
       color: #555;
     }
@@ -80,36 +64,41 @@
 </head>
 <body>
   <div class="container">
-    <h1><span class="section-icon">🌍</span>Bảo Vệ Môi Trường Là Gì?</h1>
+    <h1 class="icon-earth">Bảo Vệ Môi Trường Là Gì?</h1>
     <p>
-      Bảo vệ môi trường là những hoạt động nhằm duy trì và bảo vệ tài nguyên thiên nhiên, giảm thiểu ô nhiễm và duy trì sự cân bằng sinh thái. Đây là yếu tố sống còn đối với sức khỏe, kinh tế và sự phát triển bền vững của con người.
+      Bảo vệ môi trường là những hoạt động nhằm bảo vệ tài nguyên thiên nhiên, giảm thiểu ô nhiễm và duy trì sự cân bằng sinh thái, đảm bảo một môi trường sống trong lành cho con người và các sinh vật.
     </p>
     
-    <h2><span class="section-icon">📜</span>Luật Bảo Vệ Môi Trường</h2>
+    <h2 class="icon-law">Luật Bảo Vệ Môi Trường</h2>
     <p>
       Theo khoản 1 Điều 3 của <strong>Luật Bảo vệ môi trường số 72/2020/QH14</strong> nêu rõ:
     </p>
     <blockquote>
       "Môi trường bao gồm các yếu tố vật chất tự nhiên và nhân tạo quan hệ mật thiết với nhau, bao quanh con người, có ảnh hưởng đến đời sống, kinh tế, xã hội, sự tồn tại, phát triển của con người, sinh vật và tự nhiên."
     </blockquote>
-    
-    <h2><span class="section-icon">⚠️</span>Tình Trạng Ô Nhiễm Hiện Nay</h2>
     <p>
-      Hiện nay, môi trường đang phải đối mặt với nhiều vấn đề nghiêm trọng do các hoạt động công nghiệp và sinh hoạt:
+      Ngoài ra, khoản 3 Điều 12 quy định: Ô nhiễm môi trường là sự biến đổi tính chất vật lý, hóa học, sinh học của môi trường không phù hợp với quy chuẩn kỹ thuật, gây ảnh hưởng xấu đến sức khỏe con người và sinh vật.
+    </p>
+    
+    <h2 class="icon-warning">Tình Trạng Ô Nhiễm Hiện Nay</h2>
+    <p>
+      Hiện nay, môi trường đang chịu nhiều áp lực do hoạt động công nghiệp và sinh hoạt:
     </p>
     <ul>
-      <li class="icon-air">Ô nhiễm không khí do khí thải từ phương tiện giao thông và nhà máy sản xuất gây ra các bệnh về hô hấp, tim mạch.</li>
-      <li class="icon-water">Ô nhiễm nguồn nước do rác thải và hóa chất công nghiệp làm suy giảm chất lượng nước sạch, ảnh hưởng đến sức khỏe cộng đồng.</li>
-      <li class="icon-soil">Ô nhiễm đất do sử dụng hóa chất nông nghiệp và rác thải không phân hủy ảnh hưởng đến an toàn thực phẩm.</li>
-      <li class="icon-forest">Phá rừng và suy giảm đa dạng sinh học gây mất cân bằng sinh thái và làm tăng hiệu ứng nhà kính.</li>
+      <li class="icon-danger">Ô nhiễm không khí: Khí thải từ xe cộ và nhà máy sản xuất gây ra các bệnh về hô hấp và tim mạch.</li>
+      <li class="icon-danger">Ô nhiễm nước: Rác thải và hóa chất công nghiệp làm suy giảm chất lượng nguồn nước sạch.</li>
+      <li class="icon-danger">Ô nhiễm đất: Hóa chất và rác thải không phân hủy ảnh hưởng đến an toàn thực phẩm.</li>
+      <li class="icon-danger">Phá rừng và suy giảm đa dạng sinh học: Gây mất cân bằng sinh thái và tăng hiệu ứng nhà kính.</li>
     </ul>
     
-    <h2><span class="section-icon">✅</span>Các Biện Pháp Bảo Vệ Môi Trường</h2>
+    <h2 class="icon-measure">Các Biện Pháp Bảo Vệ Môi Trường</h2>
     <p>
-      Để bảo vệ môi trường, chúng ta cần thực hiện những hành động thiết thực sau:
+      Chúng ta có thể góp phần bảo vệ môi trường bằng các hành động thiết thực sau:
     </p>
     <ul>
-      <li class="icon-recycle">Giảm sử dụng đồ nhựa, tái chế và phân loại rác thải.</li>
-      <li class="icon-forest">Trồng cây xanh, bảo vệ rừng và tái sinh hệ sinh thái tự nhiên.</li>
-      <li class="icon-action">Tiết kiệm năng lượng, sử dụng các nguồn năng lượng tái tạo như điện mặt trời và gió.</li>
-      <li class="icon-action">Ưu tiên sử dụng phương tiện giao thông công cộng và thân thiện với môi trường.</li>\n      <li class=\"icon-action\">Nâng cao ý thức cộng đồng thông qua giáo dục và các chiến dịch bảo vệ 
+      <li class="icon-measure">Giảm sử dụng đồ nhựa, tái chế và phân loại rác thải.</li>
+      <li class="icon-measure">Trồng cây xanh, bảo vệ rừng và hệ sinh thái tự nhiên.</li>
+      <li class="icon-measure">Tiết kiệm năng lượng, sử dụng năng lượng tái tạo.</li>
+      <li class="icon-measure">Ưu tiên giao thông công cộng và phương tiện ít ô nhiễm.</li>
+      <li class="icon-education">Nâng cao ý thức cộng đồng thông qua giáo dục và truyền thông về bảo vệ môi trường.</li>\n      <li class=\"icon-measure\">Thực hiện các chính sách và quy định bảo vệ môi trường của quốc gia.</li>\n    </ul>\n    \n    <h2 class=\"icon-benefit\">Lợi Ích Khi Bảo Vệ Môi Trường</h2>\n    <p>\n      Bảo vệ môi trường không chỉ góp phần cải thiện chất lượng cuộc sống mà còn giúp duy trì cân bằng sinh thái, bảo tồn đa dạng sinh học và hỗ trợ sự phát triển kinh tế bền vững.\n    </p>\n  </div>\n</body>\n</html>"
+}]}
