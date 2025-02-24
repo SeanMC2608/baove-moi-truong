@@ -1,165 +1,338 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thực trạng và giải pháp bảo vệ môi trường hiện nay</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trang Bảo Vệ Môi Trường</title>
   <style>
-    /* Reset mặc định */
+    /* =========================
+       RESET & CƠ BẢN
+       ========================= */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
-    /* Toàn trang */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5; /* Nền xám nhạt */
+      background-color: #ffffff; /* Nền trắng nõn nà */
       color: #333;
       line-height: 1.6;
     }
-
-    /* Header với gradient xanh lá + xanh dương + hình Trái Đất */
-    header {
-      position: relative;
-      height: 280px;
-      background: linear-gradient(
-        45deg,
-        rgba(76, 175, 80, 0.7),
-        rgba(33, 150, 243, 0.7)
-      ), 
-      url('https://images.unsplash.com/photo-1580128632057-5c6a1a67bb7b') no-repeat center center;
-      background-size: cover;
-      background-blend-mode: overlay; /* Phối hình + gradient */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
-    /* Overlay (nếu muốn thêm mờ) 
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.3);
-    } */
-
-    /* Tiêu đề chính */
-    header h1 {
-      position: relative;
-      color: #fff;
-      text-align: center;
-      padding: 100px 20px 0;
-      font-size: 28px;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
     }
-    header p {
-      position: relative;
-      color: #fff;
-      text-align: center;
-      margin-top: 10px;
-      font-size: 16px;
-    }
-
-    /* Khu vực nội dung chính */
-    .content {
-      max-width: 900px;
-      margin: -60px auto 20px; 
-      /* Đẩy lên trùm 1 phần header (tạo cảm giác khối nổi) */
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      padding: 20px;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Mục tiêu đề trong nội dung */
-    .section-title {
-      color: #2e7d32;
-      border-bottom: 2px solid #2e7d32;
+    li {
       margin-bottom: 10px;
-      padding-bottom: 5px;
-      font-size: 20px;
     }
-
-    /* Các đoạn văn */
+    h1, h2, h3, h4 {
+      margin-bottom: 10px;
+      color: #2e7d32;
+    }
     p {
       margin-bottom: 15px;
       text-align: justify;
+      font-size: 17px;
     }
 
-    /* Hình minh họa */
-    .image {
+    /* =========================
+       HEADER & MENU
+       ========================= */
+    header {
+      background: linear-gradient(to right, #4caf50, #8bc34a);
+      padding: 20px;
       text-align: center;
-      margin: 20px 0;
+      color: #fff;
+      margin-bottom: 20px;
     }
-    .image img {
-      max-width: 100%;
-      border-radius: 5px;
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 5px;
     }
-
-    /* Danh sách icon */
-    ul {
-      list-style: none;
-      margin-bottom: 15px;
-      padding-left: 0;
-    }
-    ul li {
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
+    header p {
       font-size: 16px;
     }
-    ul li::before {
-      content: '♻️'; /* Icon mặc định cho bullet */
-      margin-right: 8px;
-      font-size: 18px;
+
+    nav {
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin-bottom: 20px;
     }
-    /* Footer */
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    nav li {
+      list-style: none;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+      padding: 8px 15px;
+      border: 2px solid #2e7d32;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #2e7d32;
+      color: #fff;
+    }
+
+    /* =========================
+       CONTAINER CHÍNH
+       ========================= */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto 30px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px 30px;
+    }
+
+    /* =========================
+       NỘI DUNG CÁC MỤC
+       ========================= */
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #4caf50;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .section h3 {
+      font-size: 20px;
+      margin-top: 15px;
+      margin-bottom: 8px;
+      color: #388e3c;
+    }
+    .section h4 {
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      color: #1b5e20;
+    }
+
+    /* Icon bullet */
+    .icon-earth::before   { content: '🌍  '; }
+    .icon-law::before     { content: '📜  '; }
+    .icon-warning::before { content: '⚠️  '; }
+    .icon-measure::before { content: '✅  '; }
+    .icon-benefit::before { content: '🌱  '; }
+    .icon-date::before    { content: '📅  '; }
+
+    /* =========================
+       FOOTER
+       ========================= */
     footer {
       text-align: center;
-      margin: 20px auto;
-      font-size: 14px;
       color: #777;
+      font-size: 14px;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ddd;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+
+    /* =========================
+       ĐÁP ỨNG DI ĐỘNG
+       ========================= */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+      nav a {
+        margin-bottom: 10px;
+      }
+      .container {
+        padding: 15px 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Phần tiêu đề -->
+
+  <!-- HEADER -->
   <header>
-    <h1>Thực trạng và giải pháp<br> bảo vệ môi trường hiện nay</h1>
-    <p>Hãy chung tay hành động vì một Trái Đất xanh</p>
+    <h1>Trang Bảo Vệ Môi Trường</h1>
+    <p>Cùng nhau hành động vì một hành tinh xanh, sạch, đẹp</p>
   </header>
 
-  <!-- Khối nội dung chính -->
-  <div class="content">
-    <!-- Phần: Thực trạng môi trường -->
-    <h2 class="section-title">Thực trạng bảo vệ môi trường</h2>
-    <p>
-      Hiện nay, môi trường đang chịu áp lực lớn do các hoạt động công nghiệp, giao thông và sinh hoạt. 
-      Nhiều khu vực đối mặt với ô nhiễm không khí, nguồn nước, và đất. 
-      Sự suy giảm đa dạng sinh học và phá rừng đã gây mất cân bằng sinh thái, ảnh hưởng trực tiếp đến sức khỏe con người 
-      và sự phát triển kinh tế bền vững.
-    </p>
-    <div class="image">
-      <img src="https://source.unsplash.com/800x400/?pollution" alt="Ô nhiễm môi trường">
-    </div>
-
-    <!-- Phần: Giải pháp -->
-    <h2 class="section-title">Giải pháp bảo vệ môi trường</h2>
-    <p>Để cải thiện tình trạng môi trường, cần triển khai các giải pháp tổng thể:</p>
+  <!-- MENU ĐƠN GIẢN -->
+  <nav>
     <ul>
-      <li>Giáo dục và truyền thông nâng cao ý thức cộng đồng về bảo vệ môi trường.</li>
-      <li>Áp dụng công nghệ xanh, giảm khí thải và rác thải nhựa.</li>
-      <li>Khuyến khích sử dụng năng lượng tái tạo như điện mặt trời, điện gió.</li>
-      <li>Bảo tồn rừng, nguồn nước và phục hồi hệ sinh thái bị tổn thương.</li>
-      <li>Tăng cường quản lý, giám sát và xử lý nghiêm các vi phạm về môi trường.</li>
+      <li><a href="#gioi-thieu">Giới Thiệu</a></li>
+      <li><a href="#luat">Luật Môi Trường</a></li>
+      <li><a href="#thuc-trang">Thực Trạng</a></li>
+      <li><a href="#nguyen-nhan">Nguyên Nhân</a></li>
+      <li><a href="#hau-qua">Hậu Quả</a></li>
+      <li><a href="#giai-phap">Giải Pháp</a></li>
+      <li><a href="#ngay-le">Ngày Lễ Môi Trường</a></li>
+      <li><a href="#loi-ich">Lợi Ích</a></li>
     </ul>
-    <div class="image">
-      <img src="https://source.unsplash.com/800x400/?green,nature" alt="Giải pháp môi trường">
-    </div>
-  </div>
+  </nav>
 
-  <!-- Footer -->
+  <!-- NỘI DUNG CHÍNH -->
+  <div class="container">
+
+    <!-- GIỚI THIỆU -->
+    <div class="section" id="gioi-thieu">
+      <h2 class="icon-earth">Giới Thiệu Về Bảo Vệ Môi Trường</h2>
+      <p>
+        Bảo vệ môi trường là các hoạt động nhằm duy trì, bảo vệ và phát triển bền vững tài nguyên thiên nhiên, 
+        hạn chế ô nhiễm, giữ gìn cân bằng hệ sinh thái. Đây là trách nhiệm của mọi cá nhân, tổ chức trong xã hội. 
+        Môi trường đóng vai trò thiết yếu đối với sự sống và phát triển kinh tế - xã hội.
+      </p>
+      <p>
+        Môi trường bao gồm các yếu tố tự nhiên (đất, nước, không khí, rừng, sinh vật, ...) và yếu tố nhân tạo 
+        (công trình, khu dân cư, cơ sở hạ tầng ...). Việc bảo vệ môi trường đòi hỏi sự tham gia đồng bộ của 
+        cộng đồng, doanh nghiệp, chính phủ và các tổ chức quốc tế.
+      </p>
+    </div>
+
+    <!-- LUẬT MÔI TRƯỜNG -->
+    <div class="section" id="luat">
+      <h2 class="icon-law">Luật Bảo Vệ Môi Trường</h2>
+      <p>
+        Theo khoản 1 Điều 3 của <strong>Luật Bảo vệ môi trường số 72/2020/QH14</strong> nêu rõ:
+      </p>
+      <blockquote>
+        "Môi trường bao gồm các yếu tố vật chất tự nhiên và nhân tạo quan hệ mật thiết với nhau, bao quanh con người, 
+        có ảnh hưởng đến đời sống, kinh tế, xã hội, sự tồn tại, phát triển của con người, sinh vật và tự nhiên."
+      </blockquote>
+      <p>
+        Luật cũng quy định rõ trách nhiệm của các bên liên quan, từ cơ quan nhà nước đến tổ chức, cá nhân 
+        trong việc quản lý, bảo vệ và sử dụng hợp lý tài nguyên, ngăn ngừa và kiểm soát các hành vi gây ô nhiễm. 
+        Đây là cơ sở pháp lý quan trọng để triển khai các biện pháp bảo vệ môi trường hiệu quả.
+      </p>
+    </div>
+
+    <!-- THỰC TRẠNG -->
+    <div class="section" id="thuc-trang">
+      <h2 class="icon-warning">Thực Trạng Ô Nhiễm Môi Trường</h2>
+      <p>
+        Ngày nay, môi trường đang phải đối mặt với nhiều vấn đề nghiêm trọng:
+      </p>
+      <ul>
+        <li>Ô nhiễm không khí: Khí thải từ xe cộ, nhà máy công nghiệp, đốt rác, đốt rơm rạ...</li>
+        <li>Ô nhiễm nước: Rác thải, hóa chất từ nông nghiệp, công nghiệp làm giảm chất lượng nguồn nước sạch.</li>
+        <li>Ô nhiễm đất: Sử dụng hóa chất, phân bón, thuốc trừ sâu quá mức, rác thải không phân hủy.</li>
+        <li>Biến đổi khí hậu: Nhiệt độ trái đất tăng, băng tan, mực nước biển dâng, thời tiết cực đoan.</li>
+        <li>Suy giảm đa dạng sinh học: Rừng bị tàn phá, nhiều loài động thực vật bị đe dọa.</li>
+      </ul>
+      <p>
+        Tình trạng ô nhiễm môi trường không chỉ ảnh hưởng đến sức khỏe con người, làm gia tăng 
+        bệnh tật mà còn gây thiệt hại cho nền kinh tế, du lịch, nông nghiệp...
+      </p>
+    </div>
+
+    <!-- NGUYÊN NHÂN -->
+    <div class="section" id="nguyen-nhan">
+      <h2>Nguyên Nhân Gây Ô Nhiễm</h2>
+      <h3>1. Hoạt Động Công Nghiệp</h3>
+      <p>
+        Nhiều khu công nghiệp xả thải trực tiếp ra môi trường, gây ô nhiễm không khí, nước, đất. 
+        Quá trình sản xuất sử dụng hóa chất, nguyên liệu hóa thạch cũng là nguyên nhân chính dẫn đến biến đổi khí hậu.
+      </p>
+      <h3>2. Giao Thông</h3>
+      <p>
+        Lượng phương tiện cá nhân tăng nhanh, sử dụng nhiên liệu xăng dầu, thải ra CO2, CO, NOx... 
+        làm chất lượng không khí ngày càng xấu đi, đặc biệt ở các đô thị lớn.
+      </p>
+      <h3>3. Quản Lý Rác Thải Kém</h3>
+      <p>
+        Nhiều địa phương chưa có hệ thống xử lý rác thải hiệu quả, rác thải sinh hoạt, rác thải nhựa bị vứt bừa bãi, 
+        gây ô nhiễm đất, nước, cản trở hệ thống thoát nước.
+      </p>
+      <h3>4. Nhận Thức Cộng Đồng</h3>
+      <p>
+        Ý thức bảo vệ môi trường của một bộ phận người dân còn thấp, dẫn đến các hành vi xả rác, 
+        sử dụng túi nilon, đồ nhựa dùng một lần tràn lan.
+      </p>
+    </div>
+
+    <!-- HẬU QUẢ -->
+    <div class="section" id="hau-qua">
+      <h2>Hậu Quả Của Ô Nhiễm Môi Trường</h2>
+      <p>
+        Ô nhiễm môi trường tác động tiêu cực đến mọi mặt của đời sống:
+      </p>
+      <ul>
+        <li>Sức khỏe con người: Tăng các bệnh về hô hấp, tim mạch, ung thư...</li>
+        <li>Thiệt hại kinh tế: Mất mùa, chi phí y tế tăng, ảnh hưởng du lịch...</li>
+        <li>Mất cân bằng hệ sinh thái: Nhiều loài sinh vật tuyệt chủng, rừng bị tàn phá.</li>
+        <li>Tác động đến khí hậu: Hiệu ứng nhà kính, bão lũ, hạn hán gia tăng.</li>
+      </ul>
+    </div>
+
+    <!-- GIẢI PHÁP -->
+    <div class="section" id="giai-phap">
+      <h2 class="icon-measure">Giải Pháp Bảo Vệ Môi Trường</h2>
+      <p>
+        Để giảm thiểu ô nhiễm và phát triển bền vững, chúng ta cần áp dụng đồng bộ các giải pháp:
+      </p>
+      <ul>
+        <li>Hoàn thiện hệ thống pháp luật, tăng cường kiểm tra, xử phạt nghiêm các vi phạm.</li>
+        <li>Đẩy mạnh giáo dục, truyền thông, nâng cao nhận thức cộng đồng.</li>
+        <li>Khuyến khích sử dụng năng lượng sạch, công nghệ sản xuất tiên tiến.</li>
+        <li>Phân loại rác tại nguồn, thúc đẩy tái chế, giảm rác thải nhựa.</li>
+        <li>Bảo tồn, trồng mới rừng, phục hồi hệ sinh thái bị tổn thương.</li>
+      </ul>
+      <p>
+        Mỗi cá nhân có thể đóng góp bằng cách sử dụng tiết kiệm điện, nước, 
+        hạn chế đồ nhựa dùng một lần, tham gia các hoạt động bảo vệ môi trường tại địa phương.
+      </p>
+    </div>
+
+    <!-- NGÀY LỄ MÔI TRƯỜNG -->
+    <div class="section" id="ngay-le">
+      <h2 class="icon-date">Những Ngày Lễ Môi Trường Quan Trọng</h2>
+      <p>Có nhiều ngày lễ quốc tế và quốc gia liên quan đến môi trường, ví dụ:</p>
+      <ul>
+        <li><strong>Ngày Môi Trường Thế Giới (5/6):</strong> Nâng cao nhận thức và hành động bảo vệ trái đất.</li>
+        <li><strong>Ngày Trái Đất (22/4):</strong> Kêu gọi hành động giảm tác động tiêu cực đến môi trường.</li>
+        <li><strong>Giờ Trái Đất (tháng 3 hàng năm):</strong> Tắt đèn 1 giờ để tiết kiệm năng lượng, giảm phát thải CO2.</li>
+        <li><strong>Ngày Đại Dương Thế Giới (8/6):</strong> Kêu gọi bảo vệ đại dương và sinh vật biển.</li>
+      </ul>
+    </div>
+
+    <!-- LỢI ÍCH -->
+    <div class="section" id="loi-ich">
+      <h2 class="icon-benefit">Lợi Ích Khi Bảo Vệ Môi Trường</h2>
+      <p>
+        Việc bảo vệ môi trường không chỉ giảm thiểu thiệt hại mà còn đem lại nhiều lợi ích to lớn:
+      </p>
+      <ul>
+        <li>Môi trường trong lành, nâng cao chất lượng sống.</li>
+        <li>Duy trì hệ sinh thái đa dạng, phát triển du lịch sinh thái.</li>
+        <li>Giảm chi phí y tế, tăng năng suất lao động.</li>
+        <li>Góp phần ổn định khí hậu, tránh thiên tai cực đoan.</li>
+      </ul>
+    </div>
+
+  </div> <!-- Kết thúc container -->
+
+  <!-- FOOTER -->
   <footer>
-    &copy; 2023 Bảo Vệ Môi Trường. All rights reserved.
+    <p>&copy; 2023 Trang Bảo Vệ Môi Trường</p>
+    <p>Bản quyền thuộc về các tác giả đóng góp. Vui lòng dẫn nguồn khi sao chép.</p>
   </footer>
+
 </body>
 </html>
