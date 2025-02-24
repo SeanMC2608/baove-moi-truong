@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bảo Vệ Môi Trường</title>
   <style>
+    /* Nền Trái Đất từ Unsplash */
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #d4edda, #ffffff); /* Nền xanh lá nhạt chuyển sang trắng */
+      background: url('https://images.unsplash.com/photo-1580128632057-5c6a1a67bb7b') no-repeat center center fixed;
+      background-size: cover;
       margin: 0;
       padding: 20px;
       color: #333;
     }
     .container {
       max-width: 900px;
-      margin: auto;
-      background: #fff;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.9); /* Nền trắng mờ để dễ đọc chữ */
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1, h2, h3 {
+    h1, h2 {
       color: #2e7d32;
       text-align: left;
       margin-bottom: 10px;
@@ -40,19 +42,23 @@
       margin-bottom: 10px;
       font-size: 18px;
       text-align: left;
+      display: flex;
+      align-items: center;
     }
     ul li::before {
       margin-right: 8px;
       font-size: 20px;
       vertical-align: middle;
     }
-    /* Icon riêng cho các mục */
-    .icon-earth::before { content: "🌍"; }
-    .icon-law::before { content: "📜"; }
-    .icon-warning::before { content: "⚠️"; }
-    .icon-measure::before { content: "✅"; }
-    .icon-danger::before { content: "🚫"; }
-    .icon-benefit::before { content: "📈"; }
+    /* Định nghĩa icon cho từng mục */
+    .icon-earth::before   { content: '🌍'; }
+    .icon-law::before     { content: '📜'; }
+    .icon-warning::before { content: '⚠️'; }
+    .icon-measure::before { content: '✅'; }
+    .icon-danger::before  { content: '🚫'; }
+    .icon-benefit::before { content: '📈'; }
+    .icon-education::before { content: '📚'; }
+
     blockquote {
       border-left: 4px solid #2e7d32;
       padding-left: 10px;
@@ -64,11 +70,13 @@
 </head>
 <body>
   <div class="container">
+    <!-- Giới thiệu -->
     <h1 class="icon-earth">Bảo Vệ Môi Trường Là Gì?</h1>
     <p>
       Bảo vệ môi trường là những hoạt động nhằm bảo vệ tài nguyên thiên nhiên, giảm thiểu ô nhiễm và duy trì sự cân bằng sinh thái, đảm bảo một môi trường sống trong lành cho con người và các sinh vật.
     </p>
-    
+
+    <!-- Luật Bảo Vệ Môi Trường -->
     <h2 class="icon-law">Luật Bảo Vệ Môi Trường</h2>
     <p>
       Theo khoản 1 Điều 3 của <strong>Luật Bảo vệ môi trường số 72/2020/QH14</strong> nêu rõ:
@@ -79,18 +87,20 @@
     <p>
       Ngoài ra, khoản 3 Điều 12 quy định: Ô nhiễm môi trường là sự biến đổi tính chất vật lý, hóa học, sinh học của môi trường không phù hợp với quy chuẩn kỹ thuật, gây ảnh hưởng xấu đến sức khỏe con người và sinh vật.
     </p>
-    
+
+    <!-- Tình trạng ô nhiễm -->
     <h2 class="icon-warning">Tình Trạng Ô Nhiễm Hiện Nay</h2>
     <p>
       Hiện nay, môi trường đang chịu nhiều áp lực do hoạt động công nghiệp và sinh hoạt:
     </p>
     <ul>
-      <li class="icon-danger">Ô nhiễm không khí: Khí thải từ xe cộ và nhà máy sản xuất gây ra các bệnh về hô hấp và tim mạch.</li>
+      <li class="icon-danger">Ô nhiễm không khí: Khí thải từ xe cộ và nhà máy gây bệnh hô hấp, tim mạch.</li>
       <li class="icon-danger">Ô nhiễm nước: Rác thải và hóa chất công nghiệp làm suy giảm chất lượng nguồn nước sạch.</li>
-      <li class="icon-danger">Ô nhiễm đất: Hóa chất và rác thải không phân hủy ảnh hưởng đến an toàn thực phẩm.</li>
-      <li class="icon-danger">Phá rừng và suy giảm đa dạng sinh học: Gây mất cân bằng sinh thái và tăng hiệu ứng nhà kính.</li>
+      <li class="icon-danger">Ô nhiễm đất: Hóa chất nông nghiệp và rác thải không phân hủy ảnh hưởng đến an toàn thực phẩm.</li>
+      <li class="icon-danger">Phá rừng, suy giảm đa dạng sinh học: Gây mất cân bằng sinh thái, làm tăng hiệu ứng nhà kính.</li>
     </ul>
-    
+
+    <!-- Biện pháp bảo vệ -->
     <h2 class="icon-measure">Các Biện Pháp Bảo Vệ Môi Trường</h2>
     <p>
       Chúng ta có thể góp phần bảo vệ môi trường bằng các hành động thiết thực sau:
@@ -98,7 +108,17 @@
     <ul>
       <li class="icon-measure">Giảm sử dụng đồ nhựa, tái chế và phân loại rác thải.</li>
       <li class="icon-measure">Trồng cây xanh, bảo vệ rừng và hệ sinh thái tự nhiên.</li>
-      <li class="icon-measure">Tiết kiệm năng lượng, sử dụng năng lượng tái tạo.</li>
-      <li class="icon-measure">Ưu tiên giao thông công cộng và phương tiện ít ô nhiễm.</li>
-      <li class="icon-education">Nâng cao ý thức cộng đồng thông qua giáo dục và truyền thông về bảo vệ môi trường.</li>\n      <li class=\"icon-measure\">Thực hiện các chính sách và quy định bảo vệ môi trường của quốc gia.</li>\n    </ul>\n    \n    <h2 class=\"icon-benefit\">Lợi Ích Khi Bảo Vệ Môi Trường</h2>\n    <p>\n      Bảo vệ môi trường không chỉ góp phần cải thiện chất lượng cuộc sống mà còn giúp duy trì cân bằng sinh thái, bảo tồn đa dạng sinh học và hỗ trợ sự phát triển kinh tế bền vững.\n    </p>\n  </div>\n</body>\n</html>"
-}]}
+      <li class="icon-measure">Tiết kiệm năng lượng, ưu tiên năng lượng tái tạo (mặt trời, gió).</li>
+      <li class="icon-measure">Ưu tiên giao thông công cộng, phương tiện ít ô nhiễm.</li>
+      <li class="icon-education">Nâng cao ý thức cộng đồng thông qua giáo dục, truyền thông về bảo vệ môi trường.</li>
+      <li class="icon-measure">Thực hiện các chính sách và quy định bảo vệ môi trường của quốc gia.</li>
+    </ul>
+
+    <!-- Lợi ích bảo vệ môi trường -->
+    <h2 class="icon-benefit">Lợi Ích Khi Bảo Vệ Môi Trường</h2>
+    <p>
+      Bảo vệ môi trường không chỉ cải thiện chất lượng cuộc sống mà còn duy trì cân bằng sinh thái, bảo tồn đa dạng sinh học và thúc đẩy phát triển kinh tế bền vững.
+    </p>
+  </div>
+</body>
+</html>
