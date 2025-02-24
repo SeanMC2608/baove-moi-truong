@@ -1,64 +1,115 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảo Vệ Môi Trường</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-            color: #000;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            color: #2e7d32;
-        }
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        blockquote {
-            font-style: italic;
-            border-left: 4px solid #2e7d32;
-            padding-left: 10px;
-            margin-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảo Vệ Môi Trường</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ffffff, #d4edda); /* Nền xanh lá nhạt chuyển sang trắng */
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #2e7d32;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 12px;
+      font-size: 18px;
+      text-align: left;
+    }
+    ul li::before {
+      margin-right: 8px;
+      font-size: 20px;
+      vertical-align: middle;
+      /* Sử dụng các icon khác nhau cho từng mục nếu muốn, ở đây dùng emoji chung cho ví dụ */
+    }
+    /* Các icon riêng cho từng mục */
+    .icon-air::before {
+      content: "🌫️";
+    }
+    .icon-water::before {
+      content: "💧";
+    }
+    .icon-soil::before {
+      content: "🌱";
+    }
+    .icon-forest::before {
+      content: "🌳";
+    }
+    .icon-recycle::before {
+      content: "♻️";
+    }
+    .icon-action::before {
+      content: "🚯";
+    }
+    .section-icon {
+      font-size: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    blockquote {
+      border-left: 4px solid #2e7d32;
+      padding-left: 10px;
+      margin-left: 0;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Bảo Vệ Môi Trường Là Gì?</h1>
-        <p>Bảo vệ môi trường là những hoạt động giúp bảo vệ tài nguyên thiên nhiên, giảm thiểu ô nhiễm và duy trì sự cân bằng sinh thái.</p>
-        
-        <h2>Luật Bảo Vệ Môi Trường</h2>
-        <p>Theo khoản 1 Điều 3 của <strong>Luật Bảo vệ môi trường số 72/2020/QH14</strong> nêu rõ:</p>
-        <blockquote>
-            "Môi trường bao gồm các yếu tố vật chất tự nhiên và nhân tạo quan hệ mật thiết với nhau, bao quanh con người, có ảnh hưởng đến đời sống, kinh tế, xã hội, sự tồn tại, phát triển của con người, sinh vật và tự nhiên."
-        </blockquote>
-        
-        <h2>Tình Trạng Hiện Nay</h2>
-        <p>Ô nhiễm môi trường đang trở thành vấn đề nghiêm trọng với sự gia tăng của rác thải, ô nhiễm không khí và nước. Hàng năm, hàng triệu tấn rác thải nhựa bị đổ ra đại dương, gây hại đến hệ sinh thái biển. Chất lượng không khí suy giảm do khí thải từ phương tiện giao thông và nhà máy, ảnh hưởng trực tiếp đến sức khỏe con người.</p>
-        
-        <h2>Biện Pháp Bảo Vệ Môi Trường</h2>
-        <ul>
-            <li>Giảm thiểu rác thải, tái chế và sử dụng vật liệu thân thiện môi trường.</li>
-            <li>Hạn chế sử dụng nhựa và túi nilon.</li>
-            <li>Bảo vệ rừng, tài nguyên thiên nhiên.</li>
-            <li>Tham gia các hoạt động bảo vệ môi trường như trồng cây xanh.</li>
-            <li>Nâng cao ý thức cộng đồng về bảo vệ môi trường thông qua giáo dục và truyền thông.</li>
-            <li>Thực hiện các biện pháp giảm khí thải từ phương tiện giao thông và nhà máy.</li>
-        </ul>
-    </div>
-</body>
-</html>
+  <div class="container">
+    <h1><span class="section-icon">🌍</span>Bảo Vệ Môi Trường Là Gì?</h1>
+    <p>
+      Bảo vệ môi trường là những hoạt động nhằm duy trì và bảo vệ tài nguyên thiên nhiên, giảm thiểu ô nhiễm và duy trì sự cân bằng sinh thái. Đây là yếu tố sống còn đối với sức khỏe, kinh tế và sự phát triển bền vững của con người.
+    </p>
+    
+    <h2><span class="section-icon">📜</span>Luật Bảo Vệ Môi Trường</h2>
+    <p>
+      Theo khoản 1 Điều 3 của <strong>Luật Bảo vệ môi trường số 72/2020/QH14</strong> nêu rõ:
+    </p>
+    <blockquote>
+      "Môi trường bao gồm các yếu tố vật chất tự nhiên và nhân tạo quan hệ mật thiết với nhau, bao quanh con người, có ảnh hưởng đến đời sống, kinh tế, xã hội, sự tồn tại, phát triển của con người, sinh vật và tự nhiên."
+    </blockquote>
+    
+    <h2><span class="section-icon">⚠️</span>Tình Trạng Ô Nhiễm Hiện Nay</h2>
+    <p>
+      Hiện nay, môi trường đang phải đối mặt với nhiều vấn đề nghiêm trọng do các hoạt động công nghiệp và sinh hoạt:
+    </p>
+    <ul>
+      <li class="icon-air">Ô nhiễm không khí do khí thải từ phương tiện giao thông và nhà máy sản xuất gây ra các bệnh về hô hấp, tim mạch.</li>
+      <li class="icon-water">Ô nhiễm nguồn nước do rác thải và hóa chất công nghiệp làm suy giảm chất lượng nước sạch, ảnh hưởng đến sức khỏe cộng đồng.</li>
+      <li class="icon-soil">Ô nhiễm đất do sử dụng hóa chất nông nghiệp và rác thải không phân hủy ảnh hưởng đến an toàn thực phẩm.</li>
+      <li class="icon-forest">Phá rừng và suy giảm đa dạng sinh học gây mất cân bằng sinh thái và làm tăng hiệu ứng nhà kính.</li>
+    </ul>
+    
+    <h2><span class="section-icon">✅</span>Các Biện Pháp Bảo Vệ Môi Trường</h2>
+    <p>
+      Để bảo vệ môi trường, chúng ta cần thực hiện những hành động thiết thực sau:
+    </p>
+    <ul>
+      <li class="icon-recycle">Giảm sử dụng đồ nhựa, tái chế và phân loại rác thải.</li>
+      <li class="icon-forest">Trồng cây xanh, bảo vệ rừng và tái sinh hệ sinh thái tự nhiên.</li>
+      <li class="icon-action">Tiết kiệm năng lượng, sử dụng các nguồn năng lượng tái tạo như điện mặt trời và gió.</li>
+      <li class="icon-action">Ưu tiên sử dụng phương tiện giao thông công cộng và thân thiện với môi trường.</li>\n      <li class=\"icon-action\">Nâng cao ý thức cộng đồng thông qua giáo dục và các chiến dịch bảo vệ 
