@@ -1,392 +1,125 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Trang Bảo Vệ Môi Trường</title>
-  <style>
-    /* =========================
-       RESET & CƠ BẢN
-       ========================= */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #ffffff; /* Nền trắng nõn nà */
-      color: #333;
-      line-height: 1.6;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    h1, h2, h3, h4 {
-      margin-bottom: 10px;
-      color: #2e7d32;
-    }
-    p {
-      margin-bottom: 15px;
-      text-align: justify;
-      font-size: 17px;
-    }
-
-    /* =========================
-       HEADER & MENU
-       ========================= */
-    header {
-      background: linear-gradient(to right, #4caf50, #8bc34a);
-      padding: 20px;
-      text-align: center;
-      color: #fff;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      font-size: 30px;
-      margin-bottom: 5px;
-    }
-    header p {
-      font-size: 16px;
-    }
-
-    nav {
-      background-color: #f1f1f1;
-      padding: 10px;
-      margin-bottom: 20px;
-    }
-    nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-    nav li {
-      list-style: none;
-    }
-    nav a {
-      text-decoration: none;
-      color: #2e7d32;
-      font-weight: bold;
-      padding: 8px 15px;
-      border: 2px solid #2e7d32;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: #2e7d32;
-      color: #fff;
-    }
-
-    /* =========================
-       CONTAINER CHÍNH
-       ========================= */
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto 30px auto;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 20px 30px;
-    }
-
-    /* =========================
-       NỘI DUNG CÁC MỤC
-       ========================= */
-    .section {
-      margin-bottom: 40px;
-    }
-    .section h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #4caf50;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    .section h3 {
-      font-size: 20px;
-      margin-top: 15px;
-      margin-bottom: 8px;
-      color: #388e3c;
-    }
-    .section h4 {
-      font-size: 18px;
-      margin-top: 10px;
-      margin-bottom: 6px;
-      color: #1b5e20;
-    }
-
-    /* Icon bullet */
-    .icon-earth::before   { content: '🌍  '; }
-    .icon-law::before     { content: '📜  '; }
-    .icon-warning::before { content: '⚠️  '; }
-    .icon-measure::before { content: '✅  '; }
-    .icon-benefit::before { content: '🌱  '; }
-    .icon-date::before    { content: '📅  '; }
-
-    /* =========================
-       FOOTER
-       ========================= */
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 14px;
-      padding: 10px;
-      margin-top: 20px;
-      background-color: #f9f9f9;
-      border-top: 1px solid #ddd;
-    }
-    footer p {
-      margin: 5px 0;
-    }
-
-    /* =========================
-       ĐÁP ỨNG DI ĐỘNG
-       ========================= */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-      }
-      nav a {
-        margin-bottom: 10px;
-      }
-      .container {
-        padding: 15px 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <h1>Trang Bảo Vệ Môi Trường</h1>
-    <p>Cùng nhau hành động vì một hành tinh xanh, sạch, đẹp</p>
-  </header>
-
-  <!-- MENU ĐƠN GIẢN -->
-  <nav>
-    <ul>
-      <li><a href="#gioi-thieu">Giới Thiệu</a></li>
-      <li><a href="#luat">Luật Môi Trường</a></li>
-      <li><a href="#thuc-trang">Thực Trạng</a></li>
-      <li><a href="#nguyen-nhan">Nguyên Nhân</a></li>
-      <li><a href="#hau-qua">Hậu Quả</a></li>
-      <li><a href="#giai-phap">Giải Pháp</a></li>
-      <li><a href="#ngay-le">Ngày Lễ Môi Trường</a></li>
-      <li><a href="#loi-ich">Lợi Ích</a></li>
-    </ul>
-  </nav>
-
-  <!-- NỘI DUNG CHÍNH -->
-  <div class="container">
-
-    <!-- GIỚI THIỆU -->
-    <div class="section" id="gioi-thieu">
-      <h2 class="icon-earth">Giới Thiệu Về Bảo Vệ Môi Trường</h2>
-      <p>
-        Bảo vệ môi trường là các hoạt động nhằm duy trì, bảo vệ và phát triển bền vững tài nguyên thiên nhiên, 
-        hạn chế ô nhiễm, giữ gìn cân bằng hệ sinh thái. Đây là trách nhiệm của mọi cá nhân, tổ chức trong xã hội. 
-        Môi trường đóng vai trò thiết yếu đối với sự sống và phát triển kinh tế - xã hội.
-      </p>
-      <p>
-        Môi trường bao gồm các yếu tố tự nhiên (đất, nước, không khí, rừng, sinh vật, ...) và yếu tố nhân tạo 
-        (công trình, khu dân cư, cơ sở hạ tầng ...). Việc bảo vệ môi trường đòi hỏi sự tham gia đồng bộ của 
-        cộng đồng, doanh nghiệp, chính phủ và các tổ chức quốc tế.
-      </p>
-    </div>
-
-    <!-- LUẬT MÔI TRƯỜNG -->
-    <div class="section" id="luat">
-      <h2 class="icon-law">Luật Bảo Vệ Môi Trường</h2>
-      <p>
-        Theo khoản 1 Điều 3 của <strong>Luật Bảo vệ môi trường số 72/2020/QH14</strong> nêu rõ:
-      </p>
-      <blockquote>
-        "Môi trường bao gồm các yếu tố vật chất tự nhiên và nhân tạo quan hệ mật thiết với nhau, bao quanh con người, 
-        có ảnh hưởng đến đời sống, kinh tế, xã hội, sự tồn tại, phát triển của con người, sinh vật và tự nhiên."
-      </blockquote>
-      <p>
-        Luật cũng quy định rõ trách nhiệm của các bên liên quan, từ cơ quan nhà nước đến tổ chức, cá nhân 
-        trong việc quản lý, bảo vệ và sử dụng hợp lý tài nguyên, ngăn ngừa và kiểm soát các hành vi gây ô nhiễm. 
-        Đây là cơ sở pháp lý quan trọng để triển khai các biện pháp bảo vệ môi trường hiệu quả.
-      </p>
-    </div>
-
-    <!-- THỰC TRẠNG -->
-    <div class="section" id="thuc-trang">
-      <h2 class="icon-warning">Thực Trạng Ô Nhiễm Môi Trường</h2>
-      <p>
-        Ngày nay, môi trường đang phải đối mặt với nhiều vấn đề nghiêm trọng:
-      </p>
-      <ul>
-        <li>Ô nhiễm không khí: Khí thải từ xe cộ, nhà máy công nghiệp, đốt rác, đốt rơm rạ...</li>
-        <li>Ô nhiễm nước: Rác thải, hóa chất từ nông nghiệp, công nghiệp làm giảm chất lượng nguồn nước sạch.</li>
-        <li>Ô nhiễm đất: Sử dụng hóa chất, phân bón, thuốc trừ sâu quá mức, rác thải không phân hủy.</li>
-        <li>Biến đổi khí hậu: Nhiệt độ trái đất tăng, băng tan, mực nước biển dâng, thời tiết cực đoan.</li>
-        <li>Suy giảm đa dạng sinh học: Rừng bị tàn phá, nhiều loài động thực vật bị đe dọa.</li>
-      </ul>
-      <p>
-        Tình trạng ô nhiễm môi trường không chỉ ảnh hưởng đến sức khỏe con người, làm gia tăng 
-        bệnh tật mà còn gây thiệt hại cho nền kinh tế, du lịch, nông nghiệp...
-      </p>
-    </div>
-
-    <!-- NGUYÊN NHÂN -->
-    <div class="section" id="nguyen-nhan">
-      <h2>Nguyên Nhân Gây Ô Nhiễm</h2>
-      <h3>1. Hoạt Động Công Nghiệp</h3>
-      <p>
-        Nhiều khu công nghiệp xả thải trực tiếp ra môi trường, gây ô nhiễm không khí, nước, đất. 
-        Quá trình sản xuất sử dụng hóa chất, nguyên liệu hóa thạch cũng là nguyên nhân chính dẫn đến biến đổi khí hậu.
-      </p>
-      <h3>2. Giao Thông</h3>
-      <p>
-        Lượng phương tiện cá nhân tăng nhanh, sử dụng nhiên liệu xăng dầu, thải ra CO2, CO, NOx... 
-        làm chất lượng không khí ngày càng xấu đi, đặc biệt ở các đô thị lớn.
-      </p>
-      <h3>3. Quản Lý Rác Thải Kém</h3>
-      <p>
-        Nhiều địa phương chưa có hệ thống xử lý rác thải hiệu quả, rác thải sinh hoạt, rác thải nhựa bị vứt bừa bãi, 
-        gây ô nhiễm đất, nước, cản trở hệ thống thoát nước.
-      </p>
-      <h3>4. Nhận Thức Cộng Đồng</h3>
-      <p>
-        Ý thức bảo vệ môi trường của một bộ phận người dân còn thấp, dẫn đến các hành vi xả rác, 
-        sử dụng túi nilon, đồ nhựa dùng một lần tràn lan.
-      </p>
-    </div>
-
-    <!-- HẬU QUẢ -->
-    <div class="section" id="hau-qua">
-      <h2>Hậu Quả Của Ô Nhiễm Môi Trường</h2>
-      <p>
-        Ô nhiễm môi trường tác động tiêu cực đến mọi mặt của đời sống:
-      </p>
-      <ul>
-        <li>Sức khỏe con người: Tăng các bệnh về hô hấp, tim mạch, ung thư...</li>
-        <li>Thiệt hại kinh tế: Mất mùa, chi phí y tế tăng, ảnh hưởng du lịch...</li>
-        <li>Mất cân bằng hệ sinh thái: Nhiều loài sinh vật tuyệt chủng, rừng bị tàn phá.</li>
-        <li>Tác động đến khí hậu: Hiệu ứng nhà kính, bão lũ, hạn hán gia tăng.</li>
-      </ul>
-    </div>
-
-    <!-- GIẢI PHÁP -->
-    <div class="section" id="giai-phap">
-      <h2 class="icon-measure">Giải Pháp Bảo Vệ Môi Trường</h2>
-      <p>
-        Để giảm thiểu ô nhiễm và phát triển bền vững, chúng ta cần áp dụng đồng bộ các giải pháp:
-      </p>
-      <ul>
-        <li>Hoàn thiện hệ thống pháp luật, tăng cường kiểm tra, xử phạt nghiêm các vi phạm.</li>
-        <li>Đẩy mạnh giáo dục, truyền thông, nâng cao nhận thức cộng đồng.</li>
-        <li>Khuyến khích sử dụng năng lượng sạch, công nghệ sản xuất tiên tiến.</li>
-        <li>Phân loại rác tại nguồn, thúc đẩy tái chế, giảm rác thải nhựa.</li>
-        <li>Bảo tồn, trồng mới rừng, phục hồi hệ sinh thái bị tổn thương.</li>
-      </ul>
-      <p>
-        Mỗi cá nhân có thể đóng góp bằng cách sử dụng tiết kiệm điện, nước, 
-        hạn chế đồ nhựa dùng một lần, tham gia các hoạt động bảo vệ môi trường tại địa phương.
-      </p>
-    </div>
-
-    <!-- NGÀY LỄ MÔI TRƯỜNG -->
-    <div class="section" id="ngay-le">
-      <h2 class="icon-date">Những Ngày Lễ Môi Trường Quan Trọng</h2>
-      <p>Có nhiều ngày lễ quốc tế và quốc gia liên quan đến môi trường, ví dụ:</p>
-      <ul>
-        <li><strong>Ngày Môi Trường Thế Giới (5/6):</strong> Nâng cao nhận thức và hành động bảo vệ trái đất.</li>
-        <li><strong>Ngày Trái Đất (22/4):</strong> Kêu gọi hành động giảm tác động tiêu cực đến môi trường.</li>
-        <li><strong>Giờ Trái Đất (tháng 3 hàng năm):</strong> Tắt đèn 1 giờ để tiết kiệm năng lượng, giảm phát thải CO2.</li>
-        <li><strong>Ngày Đại Dương Thế Giới (8/6):</strong> Kêu gọi bảo vệ đại dương và sinh vật biển.</li>
-      </ul>
-    </div>
-
-    <!-- LỢI ÍCH -->
-    <div class="section" id="loi-ich">
-      <h2 class="icon-benefit">Lợi Ích Khi Bảo Vệ Môi Trường</h2>
-      <p>
-        Việc bảo vệ môi trường không chỉ giảm thiểu thiệt hại mà còn đem lại nhiều lợi ích to lớn:
-      </p>
-      <ul>
-        <li>Môi trường trong lành, nâng cao chất lượng sống.</li>
-        <li>Duy trì hệ sinh thái đa dạng, phát triển du lịch sinh thái.</li>
-        <li>Giảm chi phí y tế, tăng năng suất lao động.</li>
-        <li>Góp phần ổn định khí hậu, tránh thiên tai cực đoan.</li>
-      </ul>
-    </div>
-
-  </div> <!-- Kết thúc container -->
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2023 Trang Bảo Vệ Môi Trường</p>
-    <p>Bản quyền thuộc về các tác giả đóng góp. Vui lòng dẫn nguồn khi sao chép.</p>
-  </footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="vi">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Nhóm 1</title>
+  <title>Khoa Học Không Gian & Sự Sống Ngoài Trái Đất</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      color: #fff;
+      line-height: 1.6;
     }
     header {
-      background: #4CAF50;
-      color: #fff;
-      padding: 20px;
       text-align: center;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
     }
     .container {
       max-width: 900px;
       margin: 20px auto;
-      background: #fff;
-      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px 30px;
+    }
+    h2 {
+      color: #ffd700;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    .image {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .image img {
+      max-width: 100%;
+      border: 2px solid #fff;
       border-radius: 5px;
     }
     footer {
       text-align: center;
-      font-size: 14px;
-      color: #666;
       padding: 10px;
-      background: #f1f1f1;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.4);
+      color: #ccc;
       margin-top: 20px;
-    }
-    footer p {
-      margin: 5px 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Trang Web Của Nhóm 1</h1>
+    <h1>Khoa Học Không Gian & Sự Sống Ngoài Trái Đất</h1>
+    <p>Khám phá vũ trụ rộng lớn và tìm kiếm những dấu hiệu của sự sống ngoài hành tinh</p>
   </header>
+
   <div class="container">
-    <h2>Giới Thiệu</h2>
+    <h2>1. Giới Thiệu Về Khoa Học Không Gian</h2>
     <p>
-      Đây là nội dung chính của trang web. Bạn có thể chèn thêm thông tin, hình ảnh hoặc các phần khác.
+      Khoa học không gian (Space Science) là lĩnh vực nghiên cứu các hiện tượng và đối tượng nằm bên ngoài bầu khí quyển Trái Đất. 
+      Các nhà khoa học sử dụng vệ tinh, kính thiên văn và tàu vũ trụ để thu thập dữ liệu về hành tinh, ngôi sao, thiên hà, 
+      và nhiều vật thể khác trong vũ trụ. Mục tiêu là hiểu rõ hơn về nguồn gốc, cấu trúc và tiến hóa của vũ trụ.
+    </p>
+
+    <div class="image">
+      <img src="https://source.unsplash.com/800x400/?space,universe" alt="Hình ảnh vũ trụ">
+    </div>
+
+    <h2>2. Tìm Kiếm Sự Sống Ngoài Trái Đất</h2>
+    <p>
+      Từ lâu, con người đã tò mò về khả năng tồn tại sự sống trên các hành tinh khác. Nhiều chương trình nghiên cứu và sứ mệnh vũ trụ 
+      đã tập trung vào việc tìm kiếm dấu hiệu của nước, hợp chất hữu cơ và điều kiện thích hợp cho sự sống. Sao Hỏa, các mặt trăng băng của Sao Mộc 
+      và Sao Thổ là những nơi được chú ý đặc biệt.
+    </p>
+    <p>
+      Việc khám phá và hiểu về sự sống ngoài Trái Đất không chỉ mở ra triển vọng mới cho nhân loại, 
+      mà còn giúp chúng ta hiểu sâu hơn về chính sự sống trên hành tinh của mình.
+    </p>
+
+    <div class="image">
+      <img src="https://source.unsplash.com/800x400/?mars,astronomy" alt="Hành tinh Sao Hỏa">
+    </div>
+
+    <h2>3. Công Nghệ Khám Phá Vũ Trụ</h2>
+    <p>
+      Để nghiên cứu vũ trụ, con người đã phát triển nhiều công nghệ tiên tiến:
+    </p>
+    <ul>
+      <li><strong>Tàu thăm dò vũ trụ (Probe):</strong> Gửi đến các hành tinh và tiểu hành tinh để thu thập dữ liệu.</li>
+      <li><strong>Kính thiên văn không gian (Space Telescope):</strong> Như Hubble, James Webb... cho phép quan sát rõ hơn 
+        những vật thể xa xôi.</li>
+      <li><strong>Rover:</strong> Xe tự hành trên Sao Hỏa, như Curiosity, Perseverance, có thể di chuyển và phân tích mẫu đất, đá.</li>
+      <li><strong>Trạm vũ trụ (ISS):</strong> Môi trường nghiên cứu phi trọng lực và thử nghiệm khoa học.</li>
+    </ul>
+
+    <h2>4. Tương Lai Của Việc Khám Phá Không Gian</h2>
+    <p>
+      Trong tương lai, con người đặt mục tiêu đưa phi hành gia trở lại Mặt Trăng, xây dựng căn cứ lâu dài trên đó, 
+      và hướng tới Sao Hỏa. Những tiến bộ trong công nghệ đẩy, vật liệu, và trí tuệ nhân tạo sẽ mở rộng khả năng khám phá của chúng ta. 
+      Đồng thời, các tổ chức tư nhân như SpaceX, Blue Origin cũng đang cạnh tranh, tạo ra bước tiến lớn cho ngành hàng không vũ trụ.
+    </p>
+    <p>
+      Nếu thành công, việc định cư trên các hành tinh khác có thể trở thành hiện thực, giúp nhân loại đối mặt với 
+      nguy cơ cạn kiệt tài nguyên và biến đổi khí hậu trên Trái Đất.
     </p>
   </div>
+
   <footer>
-    <p>&copy; 2023 - Được thực hiện bởi <strong>Nhóm 1</strong></p>
+    <p>&copy; 2023 - Được thực hiện bởi Nhóm 1</p>
   </footer>
 </body>
 </html>
